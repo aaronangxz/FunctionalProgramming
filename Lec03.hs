@@ -2,8 +2,35 @@ x = 2
 y = let x = 3 in x + 1
 z = x + 5
 
+{-
+This code defines three variables x, y, and z.
+
+x is defined as 2.
+
+y is defined as the result of a let expression that binds x to 3 and evaluates the expression x + 1, so y is equal to 4.
+
+z is defined as the result of x + 5, where x is the global value of 2, so z is equal to 7.
+-}
+
 foo 0 x = x
 foo x y = foo (x - 1) (y + 1)
+
+{-
+foo is a recursive function that takes two arguments, x and y.
+
+The first clause of the function defines the base case, where if x is 0, the function simply returns x.
+
+The second clause defines the recursive case, where the function returns foo (x - 1) (y + 1). This means that foo will keep calling itself with x - 1 and y + 1 until x reaches 0.
+
+For example, if you call foo 3 2, the function will evaluate as follows:
+
+foo 3 2
+  = foo 2 (2 + 1)
+  = foo 1 (3 + 1)
+  = foo 0 (4 + 1)
+  = 4 + 1
+  = 5
+-}
 
 twice f x = f (f x)
 triple x = 3 * x

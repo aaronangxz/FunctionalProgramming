@@ -97,7 +97,6 @@ The second clause defines the recursive case, where the function returns 1 + (fo
 
 main :: IO ()
 main = do
-  print x
   print y
   print z
   print $ foo 3 5

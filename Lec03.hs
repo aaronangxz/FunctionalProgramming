@@ -95,6 +95,9 @@ The first clause of the function defines the base case, where if x is 0, the fun
 The second clause defines the recursive case, where the function returns 1 + (foo (x - 1) (y * 2)). This means that foo will keep calling itself with x - 1 and y * 2 until x reaches 0.
 -}
 
+second x y z = y
+
+
 main :: IO ()
 main = do
   print y
@@ -105,6 +108,7 @@ main = do
   print $ f 3
   print $ f1 3
   print $ (foo1 4 1)
+  -- print $ second (1 / 0) (1 / 0)
   {-
     foo 4 1
     = 1 + (foo 3 (1 * 2))
